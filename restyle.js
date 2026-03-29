@@ -1,0 +1,89 @@
+const fs = require('fs');
+const path = require('path');
+
+const cssReplacement = `  <style>
+    /* RESET */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      font-family:'Inter',sans-serif;
+      background:#020617;
+      color:#f8fafc;
+      -webkit-font-smoothing:antialiased;
+      padding:40px 0 80px;
+    }
+    .page-shell { max-width:1120px; margin:0 auto; padding:0 24px; }
+    .floating-github {
+      position:fixed; top:28px; right:28px; padding:10px;
+      border-radius:50%; background:rgba(15,23,42,0.8);
+      border:1px solid rgba(255,255,255,0.1);
+      backdrop-filter:blur(14px);
+      box-shadow:0 8px 24px rgba(0,0,0,0.4);
+      transition:0.2s ease; z-index:999;
+    }
+    .floating-github:hover {
+      transform:translateY(-3px);
+      background:rgba(255,255,255,0.15);
+    }
+    .floating-github img { filter: invert(1); } /* Makes the github vector white */
+    .glass-panel {
+      background:rgba(15,23,42,0.4);
+      border-radius:28px;
+      border:1px solid rgba(255,255,255,0.05);
+      box-shadow:0 24px 60px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.02) inset;
+      backdrop-filter:blur(20px);
+    }
+    .hero { position:relative; min-height:80vh; display:flex; align-items:center; justify-content:center; margin-bottom:72px; }
+    .hero-orbit { position:absolute; inset:0; pointer-events:none; overflow:hidden; z-index:-1;}
+    .hero-orbit-blob {
+      position:absolute; width:520px; height:520px; border-radius:999px;
+      background:radial-gradient(circle at 30% 20%, rgba(96,165,250,0.15) 0%, rgba(30,58,138,0.1) 30%, transparent 70%);
+      filter:blur(40px); top:10%; right:-10%; animation:drift 18s ease-in-out infinite alternate;
+    }
+    .hero-orbit-blob-secondary {
+      position:absolute; width:360px; height:360px; border-radius:999px;
+      background:radial-gradient(circle at 70% 80%, rgba(96,165,250,0.1) 0%, transparent 100%);
+      filter:blur(40px); bottom:-10%; left:-5%; animation:drift2 22s ease-in-out infinite alternate;
+    }
+    @keyframes drift { 0%{transform:translate3d(0,0,0) scale(1)} 50%{transform:translate3d(-40px,20px,0) scale(1.05)} 100%{transform:translate3d(-80px,-10px,0) scale(1.02)} }
+    @keyframes drift2 { 0%{transform:translate3d(0,0,0) scale(1)} 50%{transform:translate3d(30px,-20px,0) scale(1.08)} 100%{transform:translate3d(60px,10px,0) scale(1.03)} }
+    .hero-panel { padding:40px; max-width:760px; opacity:0; transform:translateY(16px); animation:fadeInUp 1.1s ease forwards; }
+    .hero-kicker { font-size:.85rem; letter-spacing:.16em; text-transform:uppercase; color:#60a5fa; margin-bottom:14px; }
+    .hero-title { font-size:3.2rem; font-weight:700; background:linear-gradient(135deg,#f8fafc,#94a3b8); -webkit-background-clip:text; color:transparent; margin-bottom:18px; }
+    .hero-subtitle { font-size:1.05rem; color:#94a3b8; max-width:520px; margin-bottom:24px; }
+    .hero-meta { display:flex; flex-wrap:wrap; gap:18px; font-size:0.9rem; color:#cbd5e1; }
+    .hero-meta span { padding:6px 12px; border-radius:999px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); }
+    .section-stack { display:flex; flex-direction:column; gap:32px; }
+    .section { padding:28px 32px 30px; opacity:0; transform:translateY(16px); animation:fadeInUp 0.9s ease forwards; }
+    .section-label { font-size:.8rem; letter-spacing:.16em; text-transform:uppercase; color:#60a5fa; margin-bottom:10px; }
+    .section-title { font-size:1.6rem; font-weight:500; margin-bottom:14px; color:#f8fafc; }
+    .section-body { font-size:.98rem; color:#94a3b8; line-height:1.7; }
+    ul { list-style:none; margin-top:6px; }
+    ul li { position:relative; padding-left:16px; margin-bottom:6px; color:#94a3b8; }
+    ul li::before { content:""; position:absolute; left:4px; top:.6em; width:5px; height:5px; border-radius:999px; background:#60a5fa; }
+    .cta { text-align:center; margin-top:80px; }
+    .cta-title { font-size:2.5rem; margin-bottom:10px; color:#f8fafc; font-weight:700; }
+    .cta-subtitle { color:#94a3b8; margin-bottom:28px; }
+    .btn-primary { padding:14px 32px; border-radius:999px; background:#2563eb; color:white; text-decoration:none; transition:0.3s ease; border: 1px solid rgba(255,255,255,0.1); display:inline-block; }
+    .btn-primary:hover { background:rgba(96,165,250,0.2); border-color:#60a5fa; box-shadow:0 0 20px rgba(96,165,250,0.4); transform:translateY(-2px); }
+    @keyframes fadeInUp { from{opacity:0; transform:translateY(18px)} to{opacity:1; transform:translateY(0)} }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #020617; }
+    ::-webkit-scrollbar-thumb { background: rgba(96, 165, 250, 0.4); border-radius: 10px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(96, 165, 250, 0.8); }
+  </style>`;
+
+const htmlFiles = ['drones.html', 'breast_cancer.html', 'grey_wolf.html', 'zero_trust_system.html'];
+const directories = ['d:\\\\Portfolio', 'd:\\\\Portfolio\\\\vite-app\\\\public'];
+
+directories.forEach(dir => {
+  htmlFiles.forEach(file => {
+    const filePath = path.join(dir, file);
+    if (fs.existsSync(filePath)) {
+      const content = fs.readFileSync(filePath, 'utf-8');
+      const newContent = content.replace(/<style>[\s\S]*?<\/style>/, cssReplacement);
+      fs.writeFileSync(filePath, newContent);
+      console.log('Updated ' + filePath);
+    }
+  });
+});
