@@ -44,14 +44,14 @@ export default function Preloader({ onComplete }) {
         fontFamily: "'Inter', sans-serif"
       }}
     >
-      <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+      <div className="preloader-unit" style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
         <motion.span 
           initial={{ opacity: 0 }}
           animate={{ opacity: [0, 1, 0] }}
           transition={{ duration: 1.2, repeat: Infinity }}
           style={{ display: 'block', width: '14px', height: '14px', background: '#f8fafc', borderRadius: '50%' }} 
         />
-        <div style={{ position: 'relative', width: '250px', height: '60px', display: 'flex', alignItems: 'center' }}>
+        <div className="preloader-text-container">
           <AnimatePresence mode="wait">
             <motion.p
               key={index}
