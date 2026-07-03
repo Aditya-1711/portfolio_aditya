@@ -1,6 +1,16 @@
 import { motion } from 'framer-motion'
 
-const skills = ["Python", "C++", "ROS2", "PyTorch", "OpenCV", "TensorFlow", "MATLAB", "SLAM", "Deep Learning", "Control Theory"]
+const skills = [
+  "Python", "ROS 2", "PyTorch", "TensorFlow", "OpenCV",
+  "SLAM", "Nav2", "Gazebo", "YOLOv8", "scikit-learn",
+  "Keras", "Deep Learning", "Reinforcement Learning",
+  "PSO", "Genetic Algorithms", "Evolutionary Strategies",
+  "FAISS", "Ollama", "LLM Deployment", "Agent Frameworks",
+  "Docker", "CI/CD", "MongoDB", "MQTT", "REST APIs",
+  "Pandas", "NumPy", "SciPy", "Matplotlib", "Plotly",
+  "Sensor Fusion", "Semantic Mapping", "Human-Robot Interaction",
+  "Git", "Linux", "Jupyter"
+]
 
 export default function About() {
   return (
