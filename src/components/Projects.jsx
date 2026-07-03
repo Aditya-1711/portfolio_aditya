@@ -54,18 +54,7 @@ const educationInfo = [
     date: "2020–2024",
     desc: "Core Areas: Mechanics, Thermofluids, CAD/CAE, Manufacturing, Mechatronics, Robotics, FEM. Engineering foundation for designing and analysing mechanical and robotic systems."
   },
-  {
-    degree: "Higher Secondary (Science) - First Class",
-    institution: "Maharashtra State Board, India",
-    date: "2018–2020",
-    desc: ""
-  },
-  {
-    degree: "Secondary School - Distinction",
-    institution: "Maharashtra State Board, India",
-    date: "2017–2018",
-    desc: ""
-  }
+
 ]
 
 const otherProjects = [
