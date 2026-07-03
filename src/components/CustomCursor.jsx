@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { Bot, Smile, Zap } from 'lucide-react'
+import { Bot, Zap } from 'lucide-react'
 
 export default function CustomCursor() {
   const cursorRef = useRef(null)
@@ -54,10 +54,6 @@ export default function CustomCursor() {
     content = <Zap size={22} />
     color = '#facc15' // energetic yellow zap
     scale = 0.75
-  } else if (isHovering) {
-    content = <Smile size={24} />
-    color = '#ffffff' // pure white to pop against the dark backgrounds
-    scale = 1.3
   }
 
   return (
