@@ -4,6 +4,16 @@ import TiltCard from './TiltCard'
 
 const featuredProjects = [
   {
+    title: "ARCHER — Cognitive Robotics System",
+    desc: "A privacy-preserving robotic architecture integrating local LLM reasoning (Ollama/Llama 3.2), voice control (Whisper), semantic memory (FAISS), and autonomous navigation (SLAM, Nav2, YOLOv8) in ROS 2 — no cloud dependency.",
+    link: "archer.html"
+  },
+  {
+    title: "Local LLM Systems Integration",
+    desc: "Self-hosted AI infrastructure on a VPS using Ollama, OpenClaw agent orchestration, and Telegram interfaces for autonomous conversational workflows — full-stack private AI deployment.",
+    link: "local_llm.html"
+  },
+  {
     title: "Zero Trust System",
     desc: "A containerised, AI‑optimised safety system that analyses API behaviour using static AST parsing, dynamic telemetry, and explainable risk scoring engineered for zero‑trust microservice environments.",
     link: "zero_trust_system.html"
