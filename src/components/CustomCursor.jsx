@@ -9,6 +9,7 @@ export default function CustomCursor() {
   useEffect(() => {
     const updateMousePosition = e => {
       if (cursorRef.current) {
+        cursorRef.current.style.opacity = '1'
         // -11px offsets to center the 22x22 bot icon
         cursorRef.current.style.transform = `translate3d(${e.clientX - 11}px, ${e.clientY - 11}px, 0)`
       }
@@ -63,11 +64,12 @@ export default function CustomCursor() {
         position: 'fixed',
         left: 0,
         top: 0,
+        opacity: 0,
         pointerEvents: 'none',
         zIndex: 999999,
         color: color, 
         filter: `drop-shadow(0 0 8px ${color})`,
-        willChange: 'transform' // Hint to browser to hardware accelerate
+        willChange: 'transform, opacity' // Hint to browser to hardware accelerate
       }}
     >
       <div style={{ 

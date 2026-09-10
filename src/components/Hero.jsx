@@ -29,6 +29,9 @@ export default function Hero() {
             Building Intelligent Systems<br />
             That Perceive, Decide, and Act
           </h1>
+          <p style={{ color: '#94a3b8', fontSize: '1.15rem', marginTop: '18px', maxWidth: '580px', lineHeight: '1.6' }}>
+            Focused on real-world autonomy, perception, and multi-agent systems.
+          </p>
         </motion.div>
 
 
