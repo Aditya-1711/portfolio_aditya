@@ -4,34 +4,69 @@ import TiltCard from './TiltCard'
 
 const featuredProjects = [
   {
-    title: "ARCHER — Cognitive Robotics System",
-    desc: "A privacy-preserving robotic architecture integrating local LLM reasoning (Ollama/Llama 3.2), voice control (Whisper), semantic memory (FAISS), and autonomous navigation (SLAM, Nav2, YOLOv8) in ROS 2 — no cloud dependency.",
+    title: "ARCHER",
+    desc: "A privacy-first robotic architecture that thinks, speaks, and navigates without the cloud.",
     link: "archer.html"
   },
   {
     title: "Local LLM Systems Integration",
-    desc: "Self-hosted AI infrastructure on a VPS using Ollama, OpenClaw agent orchestration, and Telegram interfaces for autonomous conversational workflows — full-stack private AI deployment.",
+    desc: "Private, self-hosted AI agents operating fully on your own infrastructure.",
     link: "local_llm.html"
   },
   {
-    title: "Zero Trust System",
-    desc: "A containerised, AI‑optimised safety system that analyses API behaviour using static AST parsing, dynamic telemetry, and explainable risk scoring engineered for zero‑trust microservice environments.",
+    title: "Adaptive Code Safety Harness",
+    desc: "Securing untrusted AI code execution with adaptive threat simulation.",
     link: "zero_trust_system.html"
   },
   {
     title: "Drone Swarm Optimisation",
-    desc: "Optimised multi-drone coordination using Particle Swarm Optimisation.",
+    desc: "Coordinating multi-drone swarms using nature-inspired intelligence.",
     link: "drones.html"
   },
   {
     title: "Grey Wolf Optimisation",
-    desc: "Nature-inspired optimisation modelling leadership hierarchy and hunting behaviour.",
+    desc: "Optimising complex systems using the hunting strategies of grey wolves.",
     link: "grey_wolf.html"
   },
   {
-    title: "Breast Cancer Perception",
-    desc: "High-accuracy morphological classification using multi-model ML.",
+    title: "Breast Cancer Classification Pipeline",
+    desc: "High-accuracy, interpretable breast cancer prediction from clinical data.",
     link: "breast_cancer.html"
+  },
+  {
+    title: "Deep Reinforcement Learning for Robotic Manipulation",
+    desc: "A robotic arm that learned to pick and place objects from scratch — no human demonstrations required.",
+    link: "drl_manipulation.html"
+  },
+  {
+    title: "VLM-Grounded Object Navigation",
+    desc: "A robot that finds and navigates to any object you describe in plain English.",
+    link: "vlm_navigation.html"
+  },
+  {
+    title: "Vision-Language-Action (VLA) Robotic Manipulation",
+    desc: "Teaching a robot to turn spoken instructions directly into physical action.",
+    link: "vla_manipulation.html"
+  },
+  {
+    title: "Real-Time Traffic Sign Recognition",
+    desc: "Traffic sign recognition accurate and fast enough for real driving conditions.",
+    link: "traffic_sign_recognition.html"
+  },
+  {
+    title: "Multimodal Human Activity Recognition",
+    desc: "Recognizing human activity more reliably by combining multiple wearable sensors.",
+    link: "har_multimodal.html"
+  },
+  {
+    title: "Salary Prediction & Income Tier Classification",
+    desc: "Turning raw labour-market data into reliable income insight.",
+    link: "salary_prediction.html"
+  },
+  {
+    title: "SIPRI Military Expenditure Data Science & GUI",
+    desc: "Making 70+ years of global military spending data explorable at a glance.",
+    link: "sipri_analysis.html"
   }
 ]
 
