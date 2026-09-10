@@ -1,13 +1,12 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Breast Cancer Perception | Aditya Kapile</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Breast Cancer Perception | Aditya Kapile</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
     /* RESET */
     * { margin:0; padding:0; box-sizing:border-box; }
     html { scroll-behavior:smooth; }
@@ -49,185 +48,81 @@
     ::-webkit-scrollbar-thumb:hover { background: rgba(96, 165, 250, 0.8); }
   </style>
 </head>
-
 <body>
-
-  <!-- Floating GitHub Icon -->
-  <a href="https://github.com/Aditya-1711/breast-cancer-perception" 
-     class="floating-github" target="_blank">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" 
-  </style>
-</head>
-
+<!-- Floating GitHub Icon -->
+<a class="floating-github" href="https://github.com/Aditya-1711/breast-cancer-perception" target="_blank">
+<img <="" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" style=""/>
 <body>
-
-  <!-- Floating GitHub Icon -->
-  <a href="https://github.com/Aditya-1711/breast-cancer-perception" 
-     class="floating-github" target="_blank">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" 
-         alt="GitHub" style="width:28px;">
-  </a>
-
-  <div class="page-shell">
-
-    <!-- HERO -->
-    <section class="hero">
-
-      <!-- Gradient Orbit Blobs -->
-      <div class="hero-orbit">
-        <div class="hero-orbit-blob"></div>
-        <div class="hero-orbit-blob-secondary"></div>
-      </div>
-
-      <div class="hero-panel glass-panel">
-        <div class="hero-kicker">Breast Cancer Perception</div>
-        <h1 class="hero-title">High-accuracy morphological classification with multi-model ML.</h1>
-        <p class="hero-subtitle">
-          A machine learning perception system that classifies breast tumors as benign or malignant using
-          morphological features from digitized biopsy images, achieving up to 98.2% test accuracy.
-        </p>
-        <div class="hero-meta">
-          <span>Supervised learning</span>
-          <span>Medical imaging features</span>
-          <span>Multi-model evaluation</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTIONS -->
-    <div class="section-stack">
-
-      <!-- Problem -->
-      <section class="section glass-panel">
-        <div class="section-label">Problem</div>
-        <h2 class="section-title">Encoding clinical morphology into a perception system.</h2>
-        <div class="section-body">
-          <p>
-            Early breast cancer diagnosis relies heavily on expert interpretation of biopsy images. Subtle
-            differences in cell morphology - such as nucleus size, boundary irregularity, and concavity - can
-            indicate whether a tumor is benign or malignant.
-          </p>
-          <p>
-            This project explores how far a machine learning system can go using only hand-crafted morphological
-            features, without full image-based deep learning, to support high-accuracy classification aligned
-            with clinical intuition.
-          </p>
-        </div>
-      </section>
-
-      <!-- Dataset -->
-      <section class="section glass-panel">
-        <div class="section-label">Dataset</div>
-        <h2 class="section-title">Morphological features from digitized biopsies.</h2>
-        <div class="section-body">
-          <p>
-            The system is built on the UCI Breast Cancer Wisconsin dataset, which contains morphological
-            measurements extracted from digitized fine-needle aspiration (FNA) biopsy images.
-          </p>
-
-          <ul>
-            <li>569 labeled samples (benign vs malignant)</li>
-            <li>30 continuous morphological features</li>
-            <li>Features derived from cell nuclei shape, size, and texture</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Models -->
-      <section class="section glass-panel">
-        <div class="section-label">Models</div>
-        <h2 class="section-title">A multi-model pipeline for robust classification.</h2>
-        <div class="section-body">
-          <p>
-            The project evaluates multiple supervised learning models on the same feature set to compare
-            performance, robustness, and sensitivity to feature scaling.
-          </p>
-
-          <ul>
-            <li>Logistic Regression</li>
-            <li>Support Vector Machine (RBF kernel)</li>
-            <li>Random Forest Classifier</li>
-            <li>Multi-Layer Perceptron (Neural Network)</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Results -->
-      <section class="section glass-panel">
-        <div class="section-label">Results</div>
-        <h2 class="section-title">High accuracy aligned with clinical intuition.</h2>
-        <div class="section-body">
-          <p>
-            The best-performing models reach up to <strong>98.2% accuracy</strong> on the test set, demonstrating
-            that carefully engineered morphological features can support highly-reliable classification of
-            breast tumors.
-          </p>
-        </div>
-      </section>
-
-      <!-- Feature Insights -->
-      <section class="section glass-panel">
-        <div class="section-label">Feature Insights</div>
-        <h2 class="section-title">Worst-case morphology as a key signal.</h2>
-        <div class="section-body">
-          <p>
-            Analysis shows that "worst" (max) values of certain features are especially predictive of malignancy:
-          </p>
-
-          <ul>
-            <li><strong>Worst perimeter</strong> - boundary irregularity</li>
-            <li><strong>Worst area</strong> - largest observed cell region</li>
-            <li><strong>Worst concave points</strong> - strongest concavity deviations</li>
-          </ul>
-
-          <p>
-            These findings align with clinical expectations: more irregular, larger, and more concave nuclei
-            are more likely to be malignant.
-          </p>
-        </div>
-      </section>
-
-      <!-- Implementation -->
-      <section class="section glass-panel">
-        <div class="section-label">Implementation</div>
-        <h2 class="section-title">A reusable perception module for experimentation.</h2>
-        <div class="section-body">
-          <p>The repository is structured for clarity and experimentation:</p>
-
-          <ul>
-            <li><code>data/</code> - dataset files</li>
-            <li><code>models/</code> - trained model and scaler artefacts</li>
-            <li><code>results/</code> - evaluation outputs</li>
-            <li><code>src/</code> - training and prediction scripts</li>
-            <li><code>notebooks/</code> - exploratory analysis</li>
-          </ul>
-        </div>
-      </section>
-
-    </div>
-
-    <!-- CTA -->
-<section class="section glass-panel">
-  <div class="section-label">Architecture Diagram</div>
-  <h2 class="section-title">Multi-model CNN Pipeline</h2>
-  <div class="section-body">
-    <img src="./assets/images/breast_cancer.png" class="concept-art" alt="Breast Cancer Diagnostics Concept Art" />
-  </div>
+<!-- Floating GitHub Icon -->
+<a class="floating-github" href="https://github.com/Aditya-1711/breast-cancer-perception" target="_blank">
+<img alt="GitHub" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" style="width:28px;"/>
+</a>
+<div class="page-shell">
+<!-- HERO -->
+<section class="hero">
+<!-- Gradient Orbit Blobs -->
+<div class="hero-orbit">
+<div class="hero-orbit-blob"></div>
+<div class="hero-orbit-blob-secondary"></div>
+</div>
+<div class="hero-panel glass-panel">
+<div class="hero-kicker">Breast Cancer Perception</div>
+<h1 class="hero-title">High-accuracy morphological classification with multi-model ML.</h1>
+<p class="hero-subtitle">Developed a multi-model machine learning pipeline to reliably classify breast cancer from diagnostic datasets. The system prioritises explainability by analysing feature importance, ensuring the model's decisions are trustworthy for clinical use.</p>
+<div class="hero-meta">
+<span>Supervised learning</span>
+<span>Medical imaging features</span>
+<span>Multi-model evaluation</span>
+</div>
+</div>
 </section>
-
-    <div class="cta">
-      <h2 class="cta-title">Perception systems for real decisions.</h2>
-      <p class="cta-subtitle">
+<!-- SECTIONS -->
+<div class="section-stack">
+<section class="section glass-panel" id="problem">
+<h2 class="section-title">Overview</h2>
+<div class="section-body"><p>Developed a multi-model machine learning pipeline to reliably classify breast cancer from diagnostic datasets. The system prioritises explainability by analysing feature importance, ensuring the model's decisions are trustworthy for clinical use.</p></div>
+</section>
+<section class="section glass-panel" id="architecture">
+<h2 class="section-title">Result</h2>
+<div class="section-body">
+<p>The best-performing models reach up to <strong>98.2% accuracy</strong> on the test set, demonstrating that carefully engineered morphological features can support highly-reliable classification of breast tumors.</p>
+</div>
+</section>
+<section class="section glass-panel" id="results">
+<h2 class="section-title">Impact</h2>
+<div class="section-body">
+<p>Analysis shows that "worst" (max) values of certain features are especially predictive of malignancy:</p>
+<ul>
+<li><strong>Worst perimeter</strong> - boundary irregularity</li>
+<li><strong>Worst area</strong> - largest observed cell region</li>
+<li><strong>Worst concave points</strong> - strongest concavity deviations</li>
+</ul>
+</div>
+</section>
+<section class="section glass-panel" id="stack">
+<h2 class="section-title">Tech Stack</h2>
+<div class="section-body">
+<ul>
+<li>Logistic Regression</li>
+<li>Support Vector Machine (RBF kernel)</li>
+<li>Random Forest Classifier</li>
+<li>Multi-Layer Perceptron (Neural Network)</li>
+</ul>
+</div>
+</section>
+</div>
+<!-- CTA -->
+<div class="cta">
+<h2 class="cta-title">Perception systems for real decisions.</h2>
+<p class="cta-subtitle">
         From medical morphology to swarm behaviour, my work focuses on building ML systems that turn raw
         structure into reliable, decision-ready signals.
       </p>
-      <a href="mailto:aditya.kapile2025@my.ntu.ac.uk" class="btn-primary">
+<a class="btn-primary" href="mailto:aditya.kapile2025@my.ntu.ac.uk">
         Talk about ML perception work
       </a>
-    </div>
-
-  </div>
-
+</div>
+</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
   const initBreastCancer = () => {
@@ -285,4 +180,4 @@
 </script>
 <script src="./vibe.js"></script>
 </body>
-</html>
+</a></body></html>

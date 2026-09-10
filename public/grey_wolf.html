@@ -1,13 +1,12 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Grey Wolf Optimisation | Aditya Kapile</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Grey Wolf Optimisation | Aditya Kapile</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
     /* RESET */
     * { margin:0; padding:0; box-sizing:border-box; }
     html { scroll-behavior:smooth; }
@@ -49,127 +48,75 @@
     ::-webkit-scrollbar-thumb:hover { background: rgba(96, 165, 250, 0.8); }
   </style>
 </head>
-
 <body>
-
-  <!-- Floating GitHub Icon -->
-  <a href="https://github.com/Aditya-1711/grey-wolf-optimization-GWO-" 
-     class="floating-github" target="_blank">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" 
-         alt="GitHub" style="width:28px;">
-  </a>
-
-  <div class="page-shell">
-
-    <!-- HERO -->
-    <section class="hero">
-
-      <!-- Gradient Orbit Blobs -->
-      <div class="hero-orbit">
-        <div class="hero-orbit-blob"></div>
-        <div class="hero-orbit-blob-secondary"></div>
-      </div>
-
-      <div class="hero-panel glass-panel">
-        <div class="hero-kicker">Grey Wolf Optimisation</div>
-        <h1 class="hero-title">Nature-inspired optimisation through hierarchical leadership.</h1>
-        <p class="hero-subtitle">
-          A mathematical and behavioural simulation of the Grey Wolf Optimisation algorithm, modelling
-          leadership hierarchy and cooperative hunting to solve complex optimisation problems.
-        </p>
-        <div class="hero-meta">
-          <span>Swarm intelligence</span>
-          <span>Metaheuristic optimisation</span>
-          <span>Nature-inspired algorithms</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTIONS -->
-    <div class="section-stack">
-
-      <!-- Problem -->
-      <section class="section glass-panel">
-        <div class="section-label">Concept</div>
-        <h2 class="section-title">Optimisation inspired by grey wolf hunting behaviour.</h2>
-        <div class="section-body">
-          <p>
-            Grey Wolf Optimisation (GWO) is a metaheuristic algorithm inspired by the social hierarchy and
-            cooperative hunting strategies of grey wolves. The algorithm models leadership roles - alpha,
-            beta, delta, and omega - and uses them to guide the search for optimal solutions.
-          </p>
-        </div>
-      </section>
-
-      <!-- Behaviour -->
-      <section class="section glass-panel">
-        <div class="section-label">Behavioural Model</div>
-        <h2 class="section-title">Leadership hierarchy and encircling prey.</h2>
-        <div class="section-body">
-          <p>The algorithm simulates three core behaviours:</p>
-          <ul>
-            <li><strong>Encircling prey</strong> - wolves estimate the position of the optimal solution.</li>
-            <li><strong>Hunting</strong> - alpha, beta, and delta guide the pack.</li>
-            <li><strong>Attacking</strong> - convergence occurs as wolves close in on the prey.</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Implementation -->
-      <section class="section glass-panel">
-        <div class="section-label">Implementation</div>
-        <h2 class="section-title">Mathematical modelling of wolf behaviour.</h2>
-        <div class="section-body">
-          <p>
-            The project implements the full GWO algorithm, including:
-          </p>
-          <ul>
-            <li>Random initialisation of wolf positions.</li>
-            <li>Fitness evaluation for each wolf.</li>
-            <li>Alpha-beta-delta leadership updates.</li>
-            <li>Position updates using encircling and hunting equations.</li>
-            <li>Convergence tracking and optimisation curves.</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Results -->
-      <section class="section glass-panel">
-        <div class="section-label">Results</div>
-        <h2 class="section-title">Strong convergence on benchmark functions.</h2>
-        <div class="section-body">
-          <p>
-            The algorithm demonstrates stable convergence on multiple optimisation landscapes, including
-            multimodal and unimodal functions. Its balance between exploration and exploitation allows it
-            to escape local minima effectively.
-          </p>
-        </div>
-      </section>
-
-    </div>
-
-    <!-- CTA -->
-<section class="section glass-panel">
-  <div class="section-label">Architecture Diagram</div>
-  <h2 class="section-title">GWO Search Hierarchy</h2>
-  <div class="section-body">
-    <img src="./assets/images/grey_wolf.png" class="concept-art" alt="Grey Wolf Concept Art" />
-  </div>
+<!-- Floating GitHub Icon -->
+<a class="floating-github" href="https://github.com/Aditya-1711/grey-wolf-optimization-GWO-" target="_blank">
+<img alt="GitHub" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" style="width:28px;"/>
+</a>
+<div class="page-shell">
+<!-- HERO -->
+<section class="hero">
+<!-- Gradient Orbit Blobs -->
+<div class="hero-orbit">
+<div class="hero-orbit-blob"></div>
+<div class="hero-orbit-blob-secondary"></div>
+</div>
+<div class="hero-panel glass-panel">
+<div class="hero-kicker">Grey Wolf Optimisation</div>
+<h1 class="hero-title">Nature-inspired optimisation through hierarchical leadership.</h1>
+<p class="hero-subtitle">Implemented a nature-inspired optimisation algorithm that mathematically models the leadership hierarchy and cooperative hunting behaviour of grey wolves. The algorithm efficiently navigates complex search spaces to find optimal solutions.</p>
+<div class="hero-meta">
+<span>Swarm intelligence</span>
+<span>Metaheuristic optimisation</span>
+<span>Nature-inspired algorithms</span>
+</div>
+</div>
 </section>
-
-      <div class="cta">
-        <h2 class="cta-title">Nature-inspired intelligence for optimisation.</h2>
-        <p class="cta-subtitle">
+<!-- SECTIONS -->
+<div class="section-stack">
+<section class="section glass-panel" id="problem">
+<h2 class="section-title">Overview</h2>
+<div class="section-body"><p>Implemented a nature-inspired optimisation algorithm that mathematically models the leadership hierarchy and cooperative hunting behaviour of grey wolves. The algorithm efficiently navigates complex search spaces to find optimal solutions.</p></div>
+</section>
+<section class="section glass-panel" id="architecture">
+<h2 class="section-title">Result</h2>
+<div class="section-body">
+<p>Achieved faster convergence and better global optima discovery on standard benchmark functions compared to traditional Particle Swarm Optimization.</p>
+</div>
+</section>
+<section class="section glass-panel" id="results">
+<h2 class="section-title">Impact</h2>
+<div class="section-body">
+<ul>
+<li>Implemented hierarchical leadership structure (Alpha, Beta, Delta, Omega)</li>
+<li>Successfully balanced exploration and exploitation phases</li>
+<li>Demonstrated robustness against local minima entrapment</li>
+</ul>
+</div>
+</section>
+<section class="section glass-panel" id="stack">
+<h2 class="section-title">Tech Stack</h2>
+<div class="section-body">
+<ul>
+<li>Python</li>
+<li>NumPy</li>
+<li>Matplotlib</li>
+<li>Optimization Algorithms</li>
+</ul>
+</div>
+</section>
+</div>
+<!-- CTA -->
+<div class="cta">
+<h2 class="cta-title">Nature-inspired intelligence for optimisation.</h2>
+<p class="cta-subtitle">
           GWO showcases how simple behavioural rules can produce powerful optimisation capabilities.
         </p>
-        <a href="mailto:aditya.kapile2025@my.ntu.ac.uk" class="btn-primary">
+<a class="btn-primary" href="mailto:aditya.kapile2025@my.ntu.ac.uk">
           Discuss optimisation algorithms
         </a>
-      </div>
-
-    </div>
-  </div>
-
+</div>
+</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
   const initGreyWolf = () => {
